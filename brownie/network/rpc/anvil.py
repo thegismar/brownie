@@ -31,7 +31,8 @@ def launch(cmd: str, **kwargs: Dict) -> None:
         if " " in cmd:
             cmd = cmd.replace(" ", ".cmd ", 1)
         else:
-            cmd += ".cmd"
+            cmd = cmd.replace(" ", ".cmd ", 1)
+//          cmd += ".cmd"
     cmd_list = cmd.split(" ")
     for key, value in [(k, v) for k, v in kwargs.items() if v]:
         try:
